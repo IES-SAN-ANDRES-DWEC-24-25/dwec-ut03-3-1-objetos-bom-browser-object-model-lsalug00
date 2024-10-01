@@ -1,4 +1,4 @@
-// Author:  Carlos Tessier
+// Author:  Lidia SAludes González (lsalug00)
 // Version: 1.0
 // Date:    2024/10/01
 
