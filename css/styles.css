@@ -1,0 +1,108 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    color: #444;
+    border-bottom: 2px solid #e6e6e6;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  p, label {
+    font-size: 1rem;
+  }
+  
+  button, input[type="text"] {
+    font-size: 1rem;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Estilo para el formulario y botones */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilos para botones de navegación */
+  #btnBack, #btnForward {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  #btnBack:hover, #btnForward:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos para el temporizador */
+  #btnStartTimer, #btnStopTimer {
+    background-color: #FF5722;
+    color: white;
+  }
+  
+  #btnStartTimer:hover, #btnStopTimer:hover {
+    background-color: #E64A19;
+  }
+  
+  /* Estilo para la conexión */
+  #status {
+    font-weight: bold;
+    color: green;
+  }
+  
+  #status.offline {
+    color: red;
+  }
+  
+  #counter {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  #redirection {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #444;
+  }
+  
+  /* Layout */
+  @media (min-width: 600px) {
+    body {
+      padding: 40px;
+    }
+  
+    input[type="text"], button {
+      max-width: 400px;
+    }
+  }
+  

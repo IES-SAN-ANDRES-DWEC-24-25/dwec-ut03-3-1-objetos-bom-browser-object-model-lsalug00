@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ObjetosBOM (Browser Object Model</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>Información del Navegador</h1>
+  <button id="btnInfo">Obtener Información</button>
+
+  <h1>Redireccionar a una URL</h1>
+  <form id="redirectForm">
+    <label for="url">Ingresa una URL: </label>
+    <input type="text" id="inputUrl"  placeholder="http://www.ejemplo.com">
+    <button type="button" id="btnUrl" >Redirigir</button>
+  </form>
+  
+  <h1>Navegar en el Historial</h1>
+
+  <button id="btnBack">Atrás</button>
+  <button id="btnForward">Adelante</button>
+
+  <h1>Tamaño de la Pantalla</h1>
+  <p><strong>Ancho:</strong> <span id="width"></span> px</p>
+  <p><strong>Alto:</strong> <span id="height"></span> px</p>
+
+  <h1>Temporizador</h1>
+  <p><strong>Contador:</strong> <span id="counter">0</span></p>
+  <button id="btnStartTimer">Iniciar</button>
+  <button id="btnStopTimer">Detener</button>
+
+  <h1>Estado de la Conexión</h1>
+  <p id="status">Conectado</p>
+
+  <h1>Redirección</h1>
+  <button id="btnRedirection">Iniciar Redirección</button>
+  <p id="redirection"></p>
+
+  
+  
+  <script src="js/app.js"></script>
+  
+</body>
+</html>
