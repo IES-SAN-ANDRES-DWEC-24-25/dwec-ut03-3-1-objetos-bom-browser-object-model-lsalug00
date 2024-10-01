@@ -61,8 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Función para actualizar el tamaño de la pantalla
 function updateScreenSize() {
-  document.getElementById("width").textContent = 0;
-  document.getElementById("height").textContent = 0;
+  document.getElementById("width").textContent = outerWidth;
+  document.getElementById("height").textContent = outerHeight;
 }
 
 // Evento de cambio de pantalla
