@@ -9,9 +9,9 @@ Programar una acción para el botón "Obtener información" que muestre la infor
 
 ### **Ejercicio 2: Manipulación de la barra de direcciones**
 
-Abrir una ventana emergente (popup) de la url indicada al pulsar el botón, en caso de non indicar ninguna url, abrir la página de educayl.
+Programar el botón Abrir, para que abra una ventana emergente (popup) de la url indicada al pulsar el botón, en caso de non indicar ninguna url, abre la página de educayl.
 
-Añadir otro botón para cerrar dicha ventana emergente.
+Programar el botón Cerrar, para que cierre dicha ventana emergente.
 
 ### **Ejercicio 3: Simulando botones de historial del navegador**
 
@@ -33,7 +33,7 @@ Al hacer clic en "Detener", el temporizador debe detenerse.
 
 Completar el código que falta para que detecte cuando el usuario pierde la conexión a Internet y muestre un mensaje de alerta en ese momento. Si la conexión vuelve, debe mostrar otro mensaje indicando que la conexión ha sido restaurada.
 
-### **Ejercicio 8: Redirección después de un tiempo**
+### **Ejercicio 7: Redirección después de un tiempo**
 
 Programar el botón de redirección para que después de 5 segundos, redirija al usuario a educayl.
 
