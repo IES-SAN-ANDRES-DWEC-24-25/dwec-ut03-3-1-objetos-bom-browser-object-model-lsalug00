@@ -11,58 +11,67 @@ var timer;
 var count = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Variables botones
-  const btnInfo = document.getElementById("btnInfo");
-  const btnUrl = document.getElementById("btnUrl");
-  const btnClose = document.getElementById("btnClose");
+    // Variables botones
+    const btnInfo = document.getElementById("btnInfo");
+    const btnUrl = document.getElementById("btnUrl");
+    const btnClose = document.getElementById("btnClose");
 
-  const url = document.getElementById("inputUrl");
-  const btnBack = document.getElementById("btnBack");
-  const btnForward = document.getElementById("btnForward");
-  const redirection = document.getElementById("redirection");
+    const url = document.getElementById("inputUrl");
+    const btnBack = document.getElementById("btnBack");
+    const btnForward = document.getElementById("btnForward");
+    const redirection = document.getElementById("redirection");
+    const btnRedirection = document.getElementById("btnRedirection");
 
-  // Añadir eventos click a los botones
+    const btnStartTimer = document.getElementById("btnStartTimer");
+    const btnStopTimer = document.getElementById("btnStopTimer");
+    const btnRestartTimer = document.getElementById("btnRestartTimer");
 
-  // Muestra la información del navegador
-  btnInfo.addEventListener("click", function () {
-    informacionNavegador();
-  });
+    // Añadir eventos click a los botones
 
-  // Redirecciona a la URL introducida en el input a la nueva ventana mywindow
-  btnUrl.addEventListener("click", function () {
-    // si la URL no está vacía, redireccionar a www.educa.jcyl.es"
-  });
+    // Muestra la información del navegador
+    btnInfo.addEventListener("click", function () {
+        informacionNavegador();
+    });
 
-  // Cierra la ventana emergente mywindow
-  btnClose.addEventListener("click", function () {});
+    // Redirecciona a la URL introducida en el input a la nueva ventana mywindow
+    btnUrl.addEventListener("click", function () {
+            // si la URL no está vacía, redireccionar a www.educa.jcyl.es"
+    });
 
-  // Retroceder en la historia del navegador
-  btnBack.addEventListener("click", function () {});
+    // Cierra la ventana emergente mywindow
+    btnClose.addEventListener("click", function () {});
 
-  // Avanzar en la historia del navegador
-  btnForward.addEventListener("click", function () {});
+    // Retroceder en la historia del navegador
+    btnBack.addEventListener("click", function () {});
 
-  // Temoporizador
-  btnStartTimer.addEventListener("click", function () {
-    // Iniciar el temporizador timer cada segundo para poner en counter el valor de segundos transcurridos
-  });
+    // Avanzar en la historia del navegador
+    btnForward.addEventListener("click", function () {});
 
-  btnStopTimer.addEventListener("click", function () {
-    // Detener el temporizador timer
-  });
+    // Temoporizador
+    btnStartTimer.addEventListener("click", function () {
+        // Iniciar el temporizador timer cada segundo para poner en counter el valor de segundos transcurridos
+    });
 
-  btnRedirection.addEventListener("click", function () {
-    // avisar en el párrafo redirection que se va a redireccionar a www.educa.jcyl.es en 5 segundos
-    // Redireccionar a la página de la Junta de Castilla y León en una nueva pestaña en 5 segundos
-  });
+    btnStopTimer.addEventListener("click", function () {
+        // Detener el temporizador timer
+    });
 
-  updateScreenSize();
+    btnRestartTimer.addEventListener("click", function () {
+        // Reiniciar el temporizador timer
+    });
+
+    btnRedirection.addEventListener("click", function () {
+        // avisar en el párrafo redirection que se va a redireccionar a www.educa.jcyl.es en 5 segundos
+        // Redireccionar a la página de la Junta de Castilla y León en una nueva pestaña en 5 segundos
+    });
+
+    updateScreenSize();
 });
 
 // Función para actualizar el tamaño de la pantalla
 function updateScreenSize() {
-  document.getElementById("width").textContent = outerWidth;
-  document.getElementById("height").textContent = outerHeight;
+    document.getElementById("width").textContent = outerWidth;
+    document.getElementById("height").textContent = outerHeight;
 }
 
 // Evento de cambio de pantalla
@@ -73,14 +82,14 @@ window.onresize = updateScreenSize;
 /*
 window.addEventListener('COMPLETAR', () => {
     document.getElementById('status').textContent = 'Desconectado';
-  });
+});
 */
 
 /*
-  window.addEventListener('COMPLETAR', () => {
+window.addEventListener('COMPLETAR', () => {
     document.getElementById('status').textContent = 'Conectado';
-  });
-  */
+});
+*/
 
 // mostrar la información del navegador en una ventana emergente
 function informacionNavegador() {}
