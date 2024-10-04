@@ -66,12 +66,12 @@ button:hover {
 }
 
 /* Estilos para el temporizador */
-#btnStartTimer, #btnStopTimer {
+#btnStartTimer, #btnStopTimer, #btnRestartTimer {
   background-color: #FF5722;
   color: white;
 }
 
-#btnStartTimer:hover, #btnStopTimer:hover {
+#btnStartTimer:hover, #btnStopTimer:hover, #btnRestartTimer:hover {
   background-color: #E64A19;
 }
 
