@@ -92,7 +92,46 @@ window.addEventListener('COMPLETAR', () => {
 */
 
 // mostrar la información del navegador en una ventana emergente
-function informacionNavegador() {}
+function informacionNavegador() {
+    const userAgent = navigator.userAgent;
+    let browserName, fullVersion;
+
+    // Detectar el nombre y la versión del navegador usando userAgent
+    if (userAgent.indexOf("OPR") > -1) {
+        browserName = "Opera";
+        fullVersion = userAgent.split("OPR/")[1];
+    } else if (userAgent.indexOf("Chrome") > -1) {
+        browserName = "Chrome";
+        fullVersion = userAgent.split("Chrome/")[1].split(" ")[0];
+    } else if (userAgent.indexOf("Firefox") > -1) {
+        browserName = "Firefox";
+        fullVersion = userAgent.split("Firefox/")[1];
+    } else if (userAgent.indexOf("Safari") > -1) {
+        browserName = "Safari";
+        fullVersion = userAgent.split("Version/")[1].split(" ")[0];
+    } else if (userAgent.indexOf("MSIE") > -1 || userAgent.indexOf("Trident") > -1) {
+        browserName = "Internet Explorer";
+        fullVersion = userAgent.split("MSIE ")[1] || userAgent.split("rv:")[1];
+    } else {
+        browserName = "Desconocido";
+        fullVersion = "Desconocido";
+    }
+
+    // Obtener el sistema operativo
+    const platform = navigator.platform;
+
+    // Obtener el idioma del navegador
+    const language = navigator.language || navigator.userLanguage;
+
+    // Crear un mensaje con la información
+    const message = `Nombre del navegador: ${browserName}\n` +
+                    `Versión del navegador: ${fullVersion}\n` +
+                    `Sistema operativo: ${platform}\n` +
+                    `Idioma del navegador: ${language}`;
+
+    // Mostrar la información en una ventana emergente
+    alert(message);
+}
 
 // Función para redireccionar a una URL en una ventana nueva
 function redirect(url) {}
