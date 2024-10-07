@@ -109,17 +109,20 @@ function updateScreenSize() {
 window.onresize = updateScreenSize;
 
 // Eventos de conexión a internet
-/*
-window.addEventListener('COMPLETAR', () => {
-    document.getElementById('status').textContent = 'Desconectado';
+window.addEventListener("load", (event) => {
+    const statusDisplay =  document.getElementById('status');
+    //Se comprueba y se actualiza el estado cada segundo.
+    //No es o más optimo, pero así si funciona con el Live Server.
+    setInterval(() => {
+        if (navigator.onLine) {
+            statusDisplay.textContent = "Conectado";
+            statusDisplay.classList.remove('offline');
+        } else {
+            statusDisplay.textContent = "Desconectado";
+            statusDisplay.classList.add('offline');
+        }
+    }, 1000);
 });
-*/
-
-/*
-window.addEventListener('COMPLETAR', () => {
-    document.getElementById('status').textContent = 'Conectado';
-});
-*/
 
 // mostrar la información del navegador en una ventana emergente
 function informacionNavegador() {
