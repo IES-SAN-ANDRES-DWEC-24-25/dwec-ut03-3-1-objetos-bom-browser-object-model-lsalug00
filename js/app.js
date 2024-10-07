@@ -86,7 +86,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     btnRedirection.addEventListener("click", function () {
         // avisar en el párrafo redirection que se va a redireccionar a www.educa.jcyl.es en 5 segundos
+        redirection.textContent = "Serás redirigido a www.educa.jcyl.es en 5 segundos...";
+    
         // Redireccionar a la página de la Junta de Castilla y León en una nueva pestaña en 5 segundos
+        setTimeout(function() {
+            window.open("https://www.educa.jcyl.es", "_blank");
+            redirection.textContent = "";
+        }, 5000);
     });
 
     updateScreenSize();
