@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnStopTimer = document.getElementById("btnStopTimer");
     const btnRestartTimer = document.getElementById("btnRestartTimer");
 
+    let myWindow;
+
     // Añadir eventos click a los botones
 
     // Muestra la información del navegador
@@ -35,11 +37,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Redirecciona a la URL introducida en el input a la nueva ventana mywindow
     btnUrl.addEventListener("click", function () {
-            // si la URL no está vacía, redireccionar a www.educa.jcyl.es"
+        const inputUrlValue = url.value.trim();
+        const finalUrl = inputUrlValue ? inputUrlValue : "http://www.educa.jcyl.es";
+        myWindow = window.open(finalUrl, "_blank", "width=800,height=600");
     });
 
     // Cierra la ventana emergente mywindow
-    btnClose.addEventListener("click", function () {});
+    btnClose.addEventListener("click", function () {
+        if (myWindow) {
+            myWindow.close();
+            myWindow = null;
+        } else {
+            alert("No hay ninguna ventana abierta.");
+        }
+    });
 
     // Retroceder en la historia del navegador
     btnBack.addEventListener("click", function () {});
