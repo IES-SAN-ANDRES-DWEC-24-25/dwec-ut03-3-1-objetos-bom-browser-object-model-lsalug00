@@ -53,10 +53,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Retroceder en la historia del navegador
-    btnBack.addEventListener("click", function () {});
+    btnBack.addEventListener("click", function () {
+        history.back();
+    });
 
     // Avanzar en la historia del navegador
-    btnForward.addEventListener("click", function () {});
+    btnForward.addEventListener("click", function () {
+        history.forward();
+    });
 
     // Temoporizador
     btnStartTimer.addEventListener("click", function () {
