@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let myWindow;
     let cont = 0;
+    let timerIniciado = false;
 
     // Añadir eventos click a los botones
 
@@ -65,16 +66,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Temporizador
     btnStartTimer.addEventListener("click", function () {
-        // Iniciar el temporizador timer cada segundo para poner en counter el valor de segundos transcurridos
-        intervalo = setInterval(() => {
-            document.getElementById("counter").textContent = cont;
-            cont++;
-        }, 1000);
+        if (!timerIniciado){
+            // Iniciar el temporizador timer cada segundo para poner en counter el valor de segundos transcurridos
+            intervalo = setInterval(() => {
+                document.getElementById("counter").textContent = cont;
+                cont++;
+            }, 1000);
+            timerIniciado = true;
+        }
+        
     });
 
     btnStopTimer.addEventListener("click", function () {
         // Detener el temporizador timer
         clearInterval(intervalo);
+        timerIniciado = false;
     });
 
     btnRestartTimer.addEventListener("click", function () {
@@ -82,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
         clearInterval(intervalo);
         cont = 0;
         document.getElementById("counter").textContent = cont;
+        timerIniciado = false;
     });
 
     btnRedirection.addEventListener("click", function () {
